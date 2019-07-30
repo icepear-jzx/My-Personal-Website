@@ -22,11 +22,10 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-md bg-dark navbar-dark">
       <!-- Brand -->
-      <a class="navbar-brand" href="">
-        <!-- <img class="rounded-circle" src="photo.png" style="height:150px"> -->
+      <span class="navbar-brand">
         <img class="rounded" src="logo.jpg" style="height:30px">
-      </a>
-      
+      </span>
+
       <!-- Toggler/collapsibe Button -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
         <span class="navbar-toggler-icon"></span>
@@ -41,11 +40,17 @@
           <li class="nav-item">
             <a class="nav-link" data-toggle="tab" href="#skills">Skills</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" id="last-item">
             <a class="nav-link" data-toggle="tab" href="#projects">Porjects</a>
-          </li>
+          </li> 
         </ul>
+        <span class="navbar-brand">
+          <a class="text-muted" href="https://github.com/IcePear-Jzx">
+            <i class="fab fa-github" id="github" style="font-size:30px"></i>
+          </a>
+        </span>
       </div> 
+
     </nav>
 
     <div class="container">
@@ -56,70 +61,10 @@
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
         <div id="skills" class="container tab-pane fade"><br>
+
           <h3>Skills</h3><br>
 
-          <div class="card">
-            <div class="card-header">
-              <div class="row">
-                <div class="col-4">Python</div>
-                <div class="col-5">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="far fa-star"></i>
-                </div>
-                <div class="col-3"></div>
-              </div>
-            </div>
-            <div class="card-body">
-              Life is short, I use python.<br>
-              Life is short, I use python.<br>
-              Life is short, I use python.
-            </div> 
-          </div><br>
-
-          <div class="card">
-            <div class="card-header">
-              <div class="row">
-                <div class="col-4">HTML/CSS/JavaScript</div>
-                <div class="col-5">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="far fa-star"></i>
-                  <i class="far fa-star"></i>
-                </div>
-                <div class="col-3"></div>
-              </div>
-            </div>
-            <div class="card-body">
-              Life is short, I use python.<br>
-              Life is short, I use python.<br>
-              Life is short, I use python.
-            </div> 
-          </div><br>
-
-          <div class="card">
-              <div class="card-header">
-                <div class="row">
-                  <div class="col-4">C/C++</div>
-                  <div class="col-5">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                    <i class="far fa-star"></i>
-                    <i class="far fa-star"></i>
-                  </div>
-                  <div class="col-3"></div>
-                </div>
-              </div>
-              <div class="card-body">
-                Life is short, I use python.<br>
-                Life is short, I use python.<br>
-                Life is short, I use python.
-              </div> 
-            </div><br>
+          <!-- skill cards will be inserted here -->
 
         </div>
         <div id="projects" class="container tab-pane fade"><br>
@@ -131,4 +76,41 @@
   </body>
 </html>
 <style>
+  #github {
+    position: relative;
+    top: 3px;
+  }
+  #github:hover {
+    color: rgba(255,255,255,0.75)
+  }
+  #last-item {
+    margin : 0px 20px 0px 0px;
+  }
 </style>
+<script>
+  var skills = [
+    { name: "Python", stars: 4, text: "Life is short, I use python.<br>Life is short, I use python.<br>Life is short, I use python." },
+    { name: "HTML/CSS/JS", stars: 3, text: "Life is short, I use python.<br>Life is short, I use python.<br>Life is short, I use python." },
+    { name: "C/C++", stars: 2, text: "Life is short, I use python.<br>Life is short, I use python.<br>Life is short, I use python." },
+    { name: "MATLAB", stars: 2, text: "Life is short, I use python.<br>Life is short, I use python.<br>Life is short, I use python." },
+    { name: "Java", stars: 0, text: "Life is short, I use python.<br>Life is short, I use python.<br>Life is short, I use python." },
+  ];
+  for (skill of skills) {
+    $("#skills").append(
+      '<div class="card">' +
+        '<div class="card-header">' +
+          '<div class="row">' +
+            '<div class="col">' + skill.name + '</div>' +
+            '<div class="col text-right text-dark">' +
+              '<i class="fas fa-star"></i> '.repeat(skill.stars) +
+              '<i class="far fa-star"></i> '.repeat(5 - skill.stars) +
+            '</div>' +
+          '</div>' +
+        '</div>' +
+        '<div class="card-body">' +
+          skill.text +
+        '</div> ' +
+      '</div><br>'
+    );
+  }
+</script>
