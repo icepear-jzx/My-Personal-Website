@@ -1,0 +1,58 @@
+<!doctype html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/fontawesome.all.css') }}">
+
+  <script src="{{ url_for('static', filename='javascript/jquery.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='javascript/popper.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='javascript/bootstrap.js') }}"></script>
+
+  <title>IcePear-Jzx</title>
+
+</head>
+
+<body>
+
+  <header>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+      <div class="container">
+        <!-- Brand -->
+        <span class="navbar-brand">
+          <img class="rounded" src="{{ url_for('static', filename='image/logo.jpg') }}" style="height:30px">
+        </span>
+
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="nav navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" data-toggle="tab" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item" id="last-item">
+              <a class="nav-link" data-toggle="tab" href="#projects">Porjects</a>
+            </li> 
+          </ul>
+          <span class="navbar-brand">
+            <a class="text-muted" href="https://github.com/IcePear-Jzx">
+              <i class="fab fa-github" id="github" style="font-size:30px"></i>
+            </a>
+          </span>
+        </div> 
+      </div>  
+    </nav>
+  </header>
+
+</body>
