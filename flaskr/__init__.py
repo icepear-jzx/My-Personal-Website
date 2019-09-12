@@ -34,10 +34,13 @@ def create_app(test_config=None):
     from . import auth
     app.register_blueprint(auth.bp)
 
+    from . import home
+    app.register_blueprint(home.bp)
+
     from . import skills
     app.register_blueprint(skills.bp)
 
-    from . import home
-    app.register_blueprint(home.bp)
+    from . import projects
+    app.register_blueprint(projects.bp)
 
     return app
