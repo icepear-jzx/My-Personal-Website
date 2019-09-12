@@ -1,24 +1,22 @@
 <!doctype html>
 
 <head>
-
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/fontawesome.all.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/mycss.css') }}">
 
   <script src="{{ url_for('static', filename='javascript/jquery.min.js') }}"></script>
   <script src="{{ url_for('static', filename='javascript/popper.min.js') }}"></script>
   <script src="{{ url_for('static', filename='javascript/bootstrap.js') }}"></script>
 
   <title>IcePear-Jzx</title>
-
 </head>
 
 <body>
-
-  <header>
+  <header class="mb-4">
     <!-- Navbar -->
     <nav class="navbar navbar-expand-md bg-dark navbar-dark">
       <div class="container">
@@ -31,9 +29,9 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
           <span class="navbar-toggler-icon"></span>
         </button>
-        
+
         <!-- Navbar links -->
-        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <div class="collapse navbar-collapse d-flex" id="collapsibleNavbar">
           <ul class="nav navbar-nav">
             <li class="nav-item">
               <a class="nav-link active" data-toggle="tab" href="#home">Home</a>
@@ -45,9 +43,10 @@
               <a class="nav-link" data-toggle="tab" href="#projects">Porjects</a>
             </li> 
           </ul>
-          <span class="navbar-brand">
-            <a class="text-muted" href="https://github.com/IcePear-Jzx">
-              <i class="fab fa-github" id="github" style="font-size:30px"></i>
+          <!-- Github Link -->
+          <span class="navbar-brand ml-auto mr-0" >
+            <a href="https://github.com/IcePear-Jzx">
+              <i class="fab fa-github my-icon-nav align-middle" id="github"></i>
             </a>
           </span>
         </div> 
@@ -55,4 +54,26 @@
     </nav>
   </header>
 
+  <div class="container">
+    {% block content %}{% endblock %}
+  </div>
 </body>
+
+<style>
+  .my-icon-nav {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 30px;
+  }
+  .my-icon-nav:hover {
+    color: rgba(255, 255, 255, 0.75);
+  }
+  .my-btn-circle {
+    position: absolute;
+    bottom: 50px;
+    right: 70px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    /* padding-bottom: 4px; */
+  }
+</style>
