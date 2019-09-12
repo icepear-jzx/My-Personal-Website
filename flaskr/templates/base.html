@@ -34,13 +34,13 @@
         <div class="collapse navbar-collapse d-flex" id="collapsibleNavbar">
           <ul class="nav navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" data-toggle="tab" href="#home">Home</a>
+              <a class="nav-link active" href="{{ url_for('content.create') }}">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" data-toggle="tab" href="#skills">Skills</a>
+              <a class="nav-link" href="{{ url_for('content.skills') }}">Skills</a>
             </li>
-            <li class="nav-item" id="last-item">
-              <a class="nav-link" data-toggle="tab" href="#projects">Porjects</a>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Porjects</a>
             </li> 
           </ul>
           <!-- Github Link -->
@@ -74,6 +74,13 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    /* padding-bottom: 4px; */
+  }
+  .my-btn-circle:hover {
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.15) !important;
+    transition: all .3s ease-in-out;
+  }
+  .my-card:hover {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+    transition: all .3s ease-in-out;
   }
 </style>
