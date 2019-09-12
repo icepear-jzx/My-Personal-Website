@@ -5,11 +5,11 @@ from werkzeug.security import check_password_hash, generate_password_hash
 
 from flaskr.db import get_db
 
-bp = Blueprint('content', __name__, url_prefix='/content')
+bp = Blueprint('skills', __name__, url_prefix='/skills')
 
 
-@bp.route('/skills', methods=('GET', 'POST'))
-def skills():
+@bp.route('/', methods=('GET', 'POST'))
+def index():
     db = get_db()
 
     skills = db.execute(
@@ -18,7 +18,7 @@ def skills():
         ' ORDER BY STARS DESC'
     ).fetchall()
 
-    return render_template('content/skills.html', skills=skills)
+    return render_template('skills/index.html', skills=skills)
 
 
 @bp.route('/create', methods=('GET', 'POST'))
@@ -42,7 +42,7 @@ def create():
                 (name, stars, describe)
             )
             db.commit()
-            return redirect(url_for('content.skills'))
+            return redirect(url_for('skills.index'))
 
-    return render_template('content/create.html')
+    return render_template('skills/create.html')
 

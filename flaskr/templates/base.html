@@ -31,13 +31,13 @@
         </button>
 
         <!-- Navbar links -->
-        <div class="collapse navbar-collapse d-flex" id="collapsibleNavbar">
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
           <ul class="nav navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" href="{{ url_for('content.create') }}">Home</a>
+              <a class="nav-link active" href="{{ url_for('skills.create') }}">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{ url_for('content.skills') }}">Skills</a>
+              <a class="nav-link" href="{{ url_for('skills.index') }}">Skills</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#projects">Porjects</a>
@@ -54,7 +54,7 @@
     </nav>
   </header>
 
-  <div class="container">
+  <div class="content">
     {% block content %}{% endblock %}
   </div>
 </body>
@@ -82,5 +82,12 @@
   .my-card:hover {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
     transition: all .3s ease-in-out;
+  }
+  .my-size-full {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
   }
 </style>

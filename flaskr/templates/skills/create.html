@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div class="container">
   <form method="post">
     <label>Name</label>
     <input name="NAME" id="NAME" value="{{ request.form['NAME'] }}" required>
@@ -10,4 +11,5 @@
     <textarea name="DESCRIBE" id="DESCRIBE">{{ request.form['DESCRIBE'] }}</textarea>
     <input type="submit" value="Save">
   </form>
+</div>
 {% endblock %}

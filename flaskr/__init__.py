@@ -1,6 +1,6 @@
 import os
 
-from flask import Flask
+from flask import Flask, redirect, url_for
 
 
 def create_app(test_config=None):
@@ -23,10 +23,10 @@ def create_app(test_config=None):
         os.makedirs(app.instance_path)
     except OSError:
         pass
-    
+
     @app.route('/')
     def hello():
-        return 'hello'
+        return redirect(url_for('home.index'))
 
     from . import db
     db.init_app(app)
@@ -34,7 +34,10 @@ def create_app(test_config=None):
     from . import auth
     app.register_blueprint(auth.bp)
 
-    from . import content
-    app.register_blueprint(content.bp)
+    from . import skills
+    app.register_blueprint(skills.bp)
+
+    from . import home
+    app.register_blueprint(home.bp)
 
     return app
