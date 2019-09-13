@@ -12,12 +12,13 @@
         <div class="form-group col-4">
           <label>Stars</label>
           <select name="STARS" class="form-control" value="{{ skill['STARS'] }}">
-            <option selected>0</option>
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
+            {% for i in range(6) %}
+            {% if i == skill['STARS'] %}
+            <option selected>{{ i }}</option>
+            {% else %}
+            <option>{{ i }}</option>
+            {% endif %}
+            {% endfor %}
           </select>
         </div>
       </div>
