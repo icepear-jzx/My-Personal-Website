@@ -1,15 +1,34 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="container">
-  <form method="post">
-    <label>Name</label>
-    <input name="NAME" id="NAME" value="{{ request.form['NAME'] }}" required>
-    <label>Stars</label>
-    <input name="STARS" id="STARS" value="{{ request.form['STARS'] }}" required>
-    <label>Describe</label>
-    <textarea name="DESCRIBE" id="DESCRIBE">{{ request.form['DESCRIBE'] }}</textarea>
-    <input type="submit" value="Save">
-  </form>
+<div class="container d-flex justify-content-center">
+  <div class="card border-secondary">
+    <form class="card-body" method="post">
+      <div class="form-row">
+        <div class="form-group col-8">
+          <label>Skill</label>
+          <input type="text" name="NAME" class="form-control" value="{{ request.form['NAME'] }}" required>
+        </div>
+        <div class="form-group col-4">
+          <label>Stars</label>
+          <select name="STARS" class="form-control" value="{{ request.form['STARS'] }}">
+            <option selected>0</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <label>Describe</label>
+        <textarea name="DESCRIBE" class="form-control" rows="5">{{ request.form['DESCRIBE'] }}</textarea>
+      </div>
+      <div class="form-row mt-3 justify-content-center">
+        <button type="submit" class="btn btn-outline-primary col">Submit</button>
+      </div>
+    </form>
+  </div>
 </div>
 {% endblock %}
