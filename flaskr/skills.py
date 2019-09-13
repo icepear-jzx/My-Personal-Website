@@ -46,3 +46,39 @@ def create():
 
     return render_template('skills/create.html')
 
+
+@bp.route('/update/<skill>', methods=('GET', 'POST'))
+def update(skill):
+    db = get_db()
+
+    skill = db.execute(
+        'SELECT ID, NAME, STARS, DESCRIBE, EDIT_TIME'
+        ' FROM SKILLS'
+        ' WHERE NAME == "{}"'.format(skill)
+    ).fetchone()
+
+    id = skill['ID']
+
+    if request.method == 'POST':
+        name = request.form['NAME']
+        stars = request.form['STARS']
+        describe = request.form['DESCRIBE']
+        error = None
+
+        if not name:
+            error = 'Name is required.'
+
+        if error is not None:
+            flash(error)
+        else:
+            db = get_db()
+            db.execute(
+                'UPDATE SKILLS'
+                ' SET NAME = "{}", STARS = "{}", DESCRIBE = "{}"'
+                ' WHERE ID == "{}"'.format(name, stars, describe, id)
+            )
+            db.commit()
+            return redirect(url_for('skills.index'))
+
+    return render_template('skills/update.html', skill=skill)
+

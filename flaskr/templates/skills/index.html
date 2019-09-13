@@ -2,24 +2,26 @@
 
 {% block content %}
 <div class="container">
-  <h1>skills</h1>
+  <h1>Skills</h1>
   {% for skill in skills %}
-  <div class="card my-card">
-    <div class="card-header">
-      <div class="row">
-        <div class="col">{{ skill['NAME'] }}</div>
-        <div class="col text-right text-dark">
-          {% for _ in range(skill['STARS']) %}
-          <i class="fas fa-star"></i>
-          {% endfor %}
-          {% for _ in range(5 - skill['STARS']) %}
-          <i class="far fa-star"></i>
-          {% endfor %}
+  <a href="{{ url_for('skills.update', skill=skill['NAME']) }}" style="all: unset">
+    <div class="card my-card mt-4">
+      <div class="card-header">
+        <div class="row">
+          <div class="col">{{ skill['NAME'] }}</div>
+          <div class="col text-right text-dark">
+            {% for _ in range(skill['STARS']) %}
+            <i class="fas fa-star"></i>
+            {% endfor %}
+            {% for _ in range(5 - skill['STARS']) %}
+            <i class="far fa-star"></i>
+            {% endfor %}
+          </div>
         </div>
       </div>
+      <div class="card-body">{{ skill['DESCRIBE'] }}</div>
     </div>
-    <div class="card-body">{{ skill['DESCRIBE'] }}</div>
-  </div><br>
+  </a>
   {% endfor %}
   <a class="btn btn-primary my-btn-circle" href="{{ url_for('skills.create') }}" role="button">
     <i class="fa fa-plus align-middle" aria-hidden="true"></i>
