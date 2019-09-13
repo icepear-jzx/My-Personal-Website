@@ -23,18 +23,24 @@
         <div class="form-group col-6">
           <label>Finished</label>
           <select name="FINISHED" class="form-control" value="{{ plan['FINISHED'] }}">
-            <option selected>0</option>
-            {% for i in range(1, 100) %}
+            {% for i in range(100) %}
+            {% if i == plan['FINISHED'] %}
+            <option selected>{{ i }}</option>
+            {% else %}
             <option>{{ i }}</option>
+            {% endif %}
             {% endfor %}
           </select>
         </div>
         <div class="form-group col-6">
           <label>Goal</label>
           <select name="GOAL" class="form-control" value="{{ plan['GOAL'] }}">
-            <option selected>1</option>
-            {% for i in range(2, 100) %}
+            {% for i in range(1, 100) %}
+            {% if i == plan['GOAL'] %}
+            <option selected>{{ i }}</option>
+            {% else %}
             <option>{{ i }}</option>
+            {% endif %}
             {% endfor %}
           </select>
         </div>

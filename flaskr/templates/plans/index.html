@@ -4,14 +4,9 @@
 <div class="container">
   <h1>Plans</h1>
   {% for plan in plans %}
-  <a href="{{ url_for('plans.update', plan=plan['NAME']) }}" style="all: unset">
-    <div class="card my-card mt-4">
-      <div class="card-header">
-        <div class="row">
-          <div class="col">{{ plan['NAME'] }}</div>
-        </div>
-      </div>
-      <div class="card-body">{{ plan['END_TIME'] }}</div>
+  <a href="{{ url_for('plans.update', plan=plan['NAME']) }}">
+    <div class="progress">
+      <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: {{ plan['FINISHED'] * 100 // plan['GOAL'] }}%"></div>
     </div>
   </a>
   {% endfor %}
