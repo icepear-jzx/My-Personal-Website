@@ -82,3 +82,13 @@ def update(skill):
 
     return render_template('skills/update.html', skill=skill)
 
+
+@bp.route('/delete/<skill>', methods=('GET', 'POST'))
+def delete(skill):
+    db = get_db()
+    db.execute(
+        'DELETE FROM SKILLS'
+        ' WHERE NAME == "{}"'.format(skill)
+    )
+    db.commit()
+    return redirect(url_for('skills.index'))
