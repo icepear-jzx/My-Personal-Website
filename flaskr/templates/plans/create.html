@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container d-flex justify-content-center">
+  <div class="card border-secondary">
+    <form class="card-body" method="post">
+      <div class="form-row">
+        <div class="form-group col-9">
+          <label>Plan</label>
+          <input type="text" name="NAME" class="form-control" value="{{ request.form['NAME'] }}" required>
+        </div>
+        <div class="form-group col-3">
+          <label>Timespan</label>
+          <select name="TIMESPAN" class="form-control" value="{{ request.form['TIMESPAN'] }}">
+            <option selected>Day</option>
+            <option>Week</option>
+            <option>Month</option>
+            <option>Year</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-6">
+          <label>Finished</label>
+          <select name="FINISHED" class="form-control" value="{{ request.form['FINISHED'] }}">
+            <option selected>0</option>
+            {% for i in range(1, 100) %}
+            <option>{{ i }}</option>
+            {% endfor %}
+          </select>
+        </div>
+        <div class="form-group col-6">
+          <label>Goal</label>
+          <select name="GOAL" class="form-control" value="{{ request.form['GOAL'] }}">
+            <option selected>1</option>
+            {% for i in range(2, 100) %}
+            <option>{{ i }}</option>
+            {% endfor %}
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-6">
+          <label>Start time</label>
+          <input name="START_TIME" class="form-control" value="{{ request.form['START_TIME'] }}" required>
+        </div>
+        <div class="form-group col-6">
+          <label>End time</label>
+          <input name="END_TIME" class="form-control" value="{{ request.form['END_TIME'] }}" required>
+        </div>
+      </div>
+      <div class="form-row mt-1 justify-content-center">
+        <div class="form-group col mb-0">
+          <button type="submit" class="btn btn-outline-primary col">Submit</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

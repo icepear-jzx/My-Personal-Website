@@ -23,12 +23,16 @@
         </div>
       </div>
       <div class="form-row">
-        <label>Describe</label>
-        <textarea name="DESCRIBE" class="form-control" rows="5">{{ skill['DESCRIBE'] }}</textarea>
+        <div class="form-group col">
+          <label>Describe</label>
+          <textarea name="DESCRIBE" class="form-control" rows="5">{{ skill['DESCRIBE'] }}</textarea>
+        </div>
       </div>
-      <div class="form-row mt-3 justify-content-between">
-        <a class="btn btn-outline-danger mr-1 col" href="{{ url_for('skills.delete', skill=skill['NAME']) }}">Delete</a>
-        <button type="submit" class="btn btn-outline-primary ml-1 col">Submit</button>
+      <div class="form-row mt-1">
+        <div class="form-group col mb-0 d-flex justify-content-between">
+          <a class="btn btn-outline-danger col-5" href="{{ url_for('skills.delete', skill=skill['NAME']) }}">Delete</a>
+          <button type="submit" class="btn btn-outline-primary col-5">Submit</button>
+        </div>
       </div>
     </form>
   </div>

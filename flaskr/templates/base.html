@@ -60,6 +60,15 @@
               <a class="nav-link" href="{{ url_for('projects.index') }}">Projects</a>
             </li>
             {% endif %}
+            {% if request.path == '/plans/' %}
+            <li class="nav-item active">
+              <a class="nav-link" href="{{ url_for('plans.index') }}">Plans</a>
+            </li>
+            {% else %}
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('plans.index') }}">Plans</a>
+            </li>
+            {% endif %}
           </ul>
           <!-- Github Link -->
           <span class="navbar-brand ml-auto mr-0" >

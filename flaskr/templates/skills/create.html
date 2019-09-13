@@ -13,20 +13,22 @@
           <label>Stars</label>
           <select name="STARS" class="form-control" value="{{ request.form['STARS'] }}">
             <option selected>0</option>
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
+            {% for i in range(1, 6) %}
+            <option>{{ i }}</option>
+            {% endfor %}
           </select>
         </div>
       </div>
       <div class="form-row">
-        <label>Describe</label>
-        <textarea name="DESCRIBE" class="form-control" rows="5">{{ request.form['DESCRIBE'] }}</textarea>
+        <div class="form-group col">
+          <label>Describe</label>
+          <textarea name="DESCRIBE" class="form-control" rows="5">{{ request.form['DESCRIBE'] }}</textarea>
+        </div>
       </div>
-      <div class="form-row mt-3 justify-content-center">
-        <button type="submit" class="btn btn-outline-primary col">Submit</button>
+      <div class="form-row mt-1 justify-content-center">
+        <div class="form-group mb-0 col">
+          <button type="submit" class="btn btn-outline-primary col">Submit</button>
+        </div>  
       </div>
     </form>
   </div>

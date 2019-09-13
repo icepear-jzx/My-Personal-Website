@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+  <h1>Plans</h1>
+  {% for plan in plans %}
+  <a href="{{ url_for('plans.update', plan=plan['NAME']) }}" style="all: unset">
+    <div class="card my-card mt-4">
+      <div class="card-header">
+        <div class="row">
+          <div class="col">{{ plan['NAME'] }}</div>
+        </div>
+      </div>
+      <div class="card-body">{{ plan['END_TIME'] }}</div>
+    </div>
+  </a>
+  {% endfor %}
+  <a class="btn btn-primary my-btn-circle" href="{{ url_for('plans.create') }}" role="button">
+    <i class="fa fa-plus align-middle" aria-hidden="true"></i>
+  </a>
+</div>
+{% endblock %}
