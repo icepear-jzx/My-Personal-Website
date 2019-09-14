@@ -1,0 +1,40 @@
+.my-header-mb {
+    margin-bottom: 80px;
+}
+.my-icon-nav {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 30px;
+}
+.my-icon-nav:hover {
+    color: rgba(255, 255, 255, 0.75);
+}
+.my-btn-circle {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+.my-card:hover {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+    transition: all .3s ease-in-out;
+}
+.my-size-full {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+.my-center-screen {
+    position: fixed;
+    width: 100%;
+    top: 40%;
+    left: 0;
+}
+.my-a-unset, .my-a-unset:hover {
+    text-decoration: unset;
+    color: unset;
+}
