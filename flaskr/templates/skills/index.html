@@ -4,7 +4,7 @@
 <div class="container">
   <h1>Skills</h1>
   {% for skill in skills %}
-  <a href="{{ url_for('skills.update', skill=skill['NAME']) }}">
+  <a class="my-a-unset" href="{{ url_for('skills.update', skill=skill['NAME']) }}">
     <div class="card my-card mt-4">
       <div class="card-header">
         <div class="row">
@@ -19,7 +19,7 @@
           </div>
         </div>
       </div>
-      <div class="card-body">{{ skill['DESCRIBE'] }}</div>
+      <div class="card-body">{{ skill['DESCRIBE'] | safe }}</div>
     </div>
   </a>
   {% endfor %}

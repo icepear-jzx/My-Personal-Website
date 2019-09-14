@@ -13,9 +13,9 @@ def index():
     db = get_db()
 
     skills = db.execute(
-        'SELECT ID, NAME, STARS, DESCRIBE, EDIT_TIME'
-        ' FROM SKILLS'
-        ' ORDER BY STARS DESC'
+        "SELECT ID, NAME, STARS, DESCRIBE, EDIT_TIME"
+        " FROM SKILLS"
+        " ORDER BY STARS DESC"
     ).fetchall()
 
     return render_template('skills/index.html', skills=skills)
@@ -37,8 +37,8 @@ def create():
         else:
             db = get_db()
             db.execute(
-                'INSERT INTO SKILLS (NAME, STARS, DESCRIBE)'
-                ' VALUES (?, ?, ?)',
+                "INSERT INTO SKILLS (NAME, STARS, DESCRIBE)"
+                " VALUES (?, ?, ?)",
                 (name, stars, describe)
             )
             db.commit()
@@ -52,9 +52,9 @@ def update(skill):
     db = get_db()
 
     skill = db.execute(
-        'SELECT ID, NAME, STARS, DESCRIBE, EDIT_TIME'
-        ' FROM SKILLS'
-        ' WHERE NAME == "{}"'.format(skill)
+        "SELECT ID, NAME, STARS, DESCRIBE, EDIT_TIME"
+        " FROM SKILLS"
+        " WHERE NAME == '{}'".format(skill)
     ).fetchone()
 
     id = skill['ID']
@@ -73,9 +73,9 @@ def update(skill):
         else:
             db = get_db()
             db.execute(
-                'UPDATE SKILLS'
-                ' SET NAME = "{}", STARS = "{}", DESCRIBE = "{}"'
-                ' WHERE ID == "{}"'.format(name, stars, describe, id)
+                "UPDATE SKILLS"
+                " SET NAME = '{}', STARS = '{}', DESCRIBE = '{}'"
+                " WHERE ID == '{}'".format(name, stars, describe, id)
             )
             db.commit()
             return redirect(url_for('skills.index'))
@@ -87,8 +87,8 @@ def update(skill):
 def delete(skill):
     db = get_db()
     db.execute(
-        'DELETE FROM SKILLS'
-        ' WHERE NAME == "{}"'.format(skill)
+        "DELETE FROM SKILLS"
+        " WHERE NAME == '{}'".format(skill)
     )
     db.commit()
     return redirect(url_for('skills.index'))

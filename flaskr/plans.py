@@ -13,9 +13,9 @@ def index():
     db = get_db()
 
     plans = db.execute(
-        'SELECT ID, NAME, TIMESPAN, START_TIME, END_TIME, FINISHED, GOAL'
-        ' FROM PLANS'
-        ' ORDER BY GOAL DESC'
+        "SELECT ID, NAME, TIMESPAN, START_TIME, END_TIME, FINISHED, GOAL"
+        " FROM PLANS"
+        " ORDER BY GOAL DESC"
     ).fetchall()
 
     return render_template('plans/index.html', plans=plans)
@@ -40,8 +40,8 @@ def create():
         else:
             db = get_db()
             db.execute(
-                'INSERT INTO PLANS (NAME, TIMESPAN, START_TIME, END_TIME, FINISHED, GOAL)'
-                ' VALUES (?, ?, ?, ?, ?, ?)',
+                "INSERT INTO PLANS (NAME, TIMESPAN, START_TIME, END_TIME, FINISHED, GOAL)"
+                " VALUES (?, ?, ?, ?, ?, ?)",
                 (name, timespan, start_time, end_time, finished, goal)
             )
             db.commit()
@@ -55,9 +55,9 @@ def update(plan):
     db = get_db()
 
     plan = db.execute(
-        'SELECT ID, NAME, TIMESPAN, START_TIME, END_TIME, FINISHED, GOAL'
-        ' FROM PLANS'
-        ' WHERE NAME == "{}"'.format(plan)
+        "SELECT ID, NAME, TIMESPAN, START_TIME, END_TIME, FINISHED, GOAL"
+        " FROM PLANS"
+        " WHERE NAME == '{}'".format(plan)
     ).fetchone()
 
     id = plan['ID']
@@ -79,10 +79,10 @@ def update(plan):
         else:
             db = get_db()
             db.execute(
-                'UPDATE PLANS'
-                ' SET NAME = "{}", TIMESPAN = "{}", START_TIME = "{}",'
-                ' END_TIME = "{}", FINISHED = "{}", GOAL = "{}"'
-                ' WHERE ID == "{}"'.format(name, timespan, start_time, end_time, finished, goal, id)
+                "UPDATE PLANS"
+                " SET NAME = '{}', TIMESPAN = '{}', START_TIME = '{}',"
+                " END_TIME = '{}', FINISHED = '{}', GOAL = '{}'"
+                " WHERE ID == '{}'".format(name, timespan, start_time, end_time, finished, goal, id)
             )
             db.commit()
             return redirect(url_for('plans.index'))
@@ -94,8 +94,8 @@ def update(plan):
 def delete(plan):
     db = get_db()
     db.execute(
-        'DELETE FROM PLANS'
-        ' WHERE NAME == "{}"'.format(plan)
+        "DELETE FROM PLANS"
+        " WHERE NAME == '{}'".format(plan)
     )
     db.commit()
     return redirect(url_for('plans.index'))

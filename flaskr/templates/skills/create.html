@@ -22,7 +22,7 @@
       <div class="form-row">
         <div class="form-group col">
           <label>Describe</label>
-          <textarea name="DESCRIBE" class="form-control" rows="5">{{ request.form['DESCRIBE'] }}</textarea>
+          <textarea name="DESCRIBE" class="form-control" rows="5">{{ request.form['DESCRIBE'] | safe }}</textarea>
         </div>
       </div>
       <div class="form-row mt-1 justify-content-center">
