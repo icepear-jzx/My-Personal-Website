@@ -1,3 +1,3 @@
-# HomePage
+# My-Personal-Website
 
 Please visit jinzhe.xin
