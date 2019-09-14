@@ -4,21 +4,22 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/fontawesome.all.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/mycss.css') }}">
 
   <script src="{{ url_for('static', filename='javascript/jquery.min.js') }}"></script>
   <script src="{{ url_for('static', filename='javascript/popper.min.js') }}"></script>
-  <script src="{{ url_for('static', filename='javascript/bootstrap.js') }}"></script>
+  <script src="{{ url_for('static', filename='javascript/bootstrap.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='javascript/chart.min.js') }}"></script>
 
   <title>IcePear-Jzx</title>
 </head>
 
 <body>
-  <header class="mb-4">
+  <header class="my-header-mb">
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
       <div class="container">
         <!-- Brand -->
         <span class="navbar-brand">
@@ -84,9 +85,16 @@
   <div class="content">
     {% block content %}{% endblock %}
   </div>
+
+  <footer>
+    <br><br><br>
+  </footer>
 </body>
 
 <style>
+  .my-header-mb {
+    margin-bottom: 80px;
+  }
   .my-icon-nav {
     color: rgba(255, 255, 255, 0.5);
     font-size: 30px;
