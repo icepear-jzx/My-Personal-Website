@@ -11,7 +11,8 @@
           <div class="col">{{ skill['NAME'] }}</div>
           <div class="col text-right text-dark">
             {% for _ in range(skill['STARS']) %}
-            <i class="fas fa-star"></i>
+            <!-- <i class="fas fa-star"></i> -->
+            <i class="fa fa-star"></i>
             {% endfor %}
             {% for _ in range(5 - skill['STARS']) %}
             <i class="far fa-star"></i>
