@@ -9,7 +9,7 @@
         {
             "name": "Python",
             "stars": 4,
-            "describe": "None"
+            "describe": ""
         },
         {
             "name": "HTML/CSS",
@@ -27,9 +27,9 @@
             "describe": "None"
         },
         {
-            "name": "JavaScript",
-            "stars": 1,
-            "describe": "None"
+            "name": "Verilog",
+            "stars": 0,
+            "describe": ""
         }
     ],
     "projects": [
