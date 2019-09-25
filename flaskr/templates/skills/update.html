@@ -28,19 +28,6 @@
           <textarea name="describe" class="form-control" rows="5">{{ skill['describe'] }}</textarea>
         </div>
       </div>
-      {% with messages = get_flashed_messages() %}
-        {% if messages %}
-          {% for message in messages %}
-          <div class="form-row">
-            <div class="form-group col">
-              <div class="alert alert-danger mb-0" role="alert">
-                {{ message }}
-              </div>
-            </div>
-          </div>
-          {% endfor %}
-        {% endif %}
-      {% endwith %}
       <div class="form-row mt-1">
         <div class="form-group col mb-0 d-flex justify-content-between">
           <a class="btn btn-outline-danger col-5" href="{{ url_for('skills.delete', id=id) }}">Delete</a>
