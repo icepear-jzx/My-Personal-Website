@@ -8,19 +8,19 @@
     <div class="card my-card mt-4">
       <div class="card-header">
         <div class="row">
-          <div class="col">{{ skill['NAME'] }}</div>
+          <div class="col">{{ skill['name'] }}</div>
           <div class="col text-right text-dark">
-            {% for _ in range(skill['STARS']) %}
+            {% for _ in range(skill['stars']) %}
             <!-- <i class="fas fa-star"></i> -->
             <i class="fa fa-star"></i>
             {% endfor %}
-            {% for _ in range(5 - skill['STARS']) %}
+            {% for _ in range(5 - skill['stars']) %}
             <i class="far fa-star"></i>
             {% endfor %}
           </div>
         </div>
       </div>
-      <div class="card-body">{{ skill['DESCRIBE'] | safe }}</div>
+      <div class="card-body">{{ skill['describe'] | safe }}</div>
     </div>
   </a>
   {% endfor %}

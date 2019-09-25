@@ -7,11 +7,11 @@
       <div class="form-row">
         <div class="form-group col-8">
           <label>Skill</label>
-          <input type="text" name="NAME" class="form-control" value="{{ request.form['NAME'] }}" required>
+          <input type="text" name="name" class="form-control" value="{{ request.form['name'] }}" required>
         </div>
         <div class="form-group col-4">
           <label>Stars</label>
-          <select name="STARS" class="form-control" value="{{ request.form['STARS'] }}">
+          <select name="stars" class="form-control" value="{{ request.form['stars'] }}">
             <option selected>0</option>
             {% for i in range(1, 6) %}
             <option>{{ i }}</option>
@@ -22,7 +22,7 @@
       <div class="form-row">
         <div class="form-group col">
           <label>Describe</label>
-          <textarea name="DESCRIBE" class="form-control" rows="5">{{ request.form['DESCRIBE'] | safe }}</textarea>
+          <textarea name="describe" class="form-control" rows="5">{{ request.form['describe'] | safe }}</textarea>
         </div>
       </div>
       <div class="form-row mt-1 justify-content-center">

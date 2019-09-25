@@ -1,19 +1,40 @@
 {
     "users": [
-        {"name": "icepear", "password": "icepear"}
+        {
+            "name": "icepear",
+            "password": "icepear"
+        }
     ],
     "skills": [
-        {"name": "Python"},
-        {"name": "JavaScript"},
-        {"name": "C"},
-        {"name": "HTML"},
-        {"name": "CSS"},
-        {"name": "C++"},
-        {"name": "MATLAB"},
-        {"name": "Verilog"},
-        {"name": "Java"}
+        {
+            "name": "Python",
+            "stars": 4,
+            "describe": "None"
+        },
+        {
+            "name": "HTML/CSS",
+            "stars": 4,
+            "describe": "None"
+        },
+        {
+            "name": "C/C++",
+            "stars": 2,
+            "describe": "None"
+        },
+        {
+            "name": "MATLAB",
+            "stars": 2,
+            "describe": "None"
+        },
+        {
+            "name": "JavaScript",
+            "stars": 1,
+            "describe": "None"
+        }
     ],
     "projects": [
-        {"name": "Othello-AI"}
+        {
+            "name": "Othello-AI"
+        }
     ]
 }
