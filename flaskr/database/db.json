@@ -1,8 +1,8 @@
 {
     "users": [
         {
-            "name": "icepear",
-            "password": "icepear"
+            "name": "admin",
+            "password": "admin"
         }
     ],
     "skills": [
