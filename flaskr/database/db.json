@@ -1,0 +1,19 @@
+{
+    "users": [
+        {"name": "icepear", "password": "icepear"}
+    ],
+    "skills": [
+        {"name": "Python"},
+        {"name": "JavaScript"},
+        {"name": "C"},
+        {"name": "HTML"},
+        {"name": "CSS"},
+        {"name": "C++"},
+        {"name": "MATLAB"},
+        {"name": "Verilog"},
+        {"name": "Java"}
+    ],
+    "projects": [
+        {"name": "Othello-AI"}
+    ]
+}
