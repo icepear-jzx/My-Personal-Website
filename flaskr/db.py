@@ -16,4 +16,3 @@ def update_db(db):
 def sort_db(db):
     skills = db["skills"]
     skills.sort(key=lambda skill: skill["stars"], reverse=True)
-    return db
