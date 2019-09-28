@@ -5,7 +5,7 @@
   <h1>Projects</h1>
   {% for project in projects %}
   <a class="my-a-unset" href="{{ url_for('projects.update', id=projects.index(project)) }}">
-    <div class="card my-card mt-4 animated bounceInRight" style="animation-delay: 0.{{ projects.index(project) }}s">
+    <div class="card my-card mt-4 animated bounceInRight" style="animation-delay: {{ 0.2 * projects.index(project) }}s">
       <div class="card-header">
         <div class="row">
           <div class="col">{{ project['name'] }}</div>
