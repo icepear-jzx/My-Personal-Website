@@ -1,9 +1,16 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="my-size-full bg-dark">
-<div class="container">
-    <h1 class="display-1 text-light text-center my-center-screen">Hello, world!</h1>
-</div>
+<div class="my-size-full bg-dark"></div>
+<div class="container text-light d-flex justify-content-center">
+  <div class="row" style="width: 50rem">
+    <div class="col-6">
+      <img class="my-photo rounded" src="{{ url_for('static', filename='image/photo.jpg') }}">
+    </div>
+    <div class="col-6">
+      <h1>Name: Zhexin Jin</h1>
+    </div>
+  </div>
+  <!-- <h1 class="display-1 text-light text-center my-center-screen animated infinite bounce delay-2s">Hello, world!</h1> -->
 </div>
 {% endblock %}
