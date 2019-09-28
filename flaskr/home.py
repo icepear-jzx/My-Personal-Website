@@ -10,5 +10,7 @@ bp = Blueprint('home', __name__, url_prefix='/home')
 
 @bp.route('/')
 def index():
-    return render_template('home/index.html')
+    db = get_db()
+    skills = db["skills"]
+    return render_template('home/index.html', skills=skills)
 
