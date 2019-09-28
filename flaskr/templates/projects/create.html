@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container d-flex justify-content-center">
+  <div class="card border-secondary">
+    <form class="card-body" method="post">
+      <div class="form-row">
+        <div class="form-group col-12">
+          <label>Projects</label>
+          <input type="text" name="name" class="form-control" value="{{ request.form['name'] }}" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col">
+          <label>Describe</label>
+          <textarea name="describe" class="form-control" rows="5">{{ request.form['describe'] | safe }}</textarea>
+        </div>
+      </div>
+      {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          {% for message in messages %}
+          <div class="form-row">
+            <div class="form-group col">
+              <div class="alert alert-danger mb-0" role="alert">
+                {{ message }}
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        {% endif %}
+      {% endwith %}
+      <div class="form-row mt-1 justify-content-center">
+        <div class="form-group mb-0 col">
+          <button type="submit" class="btn btn-outline-primary col">Submit</button>
+        </div>  
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

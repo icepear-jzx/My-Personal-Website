@@ -34,7 +34,11 @@
     ],
     "projects": [
         {
-            "name": "Othello-AI"
+            "name": "My Personal Website",
+            "describe": ""
+        },
+        {
+            "name": "Othello AI"
         }
     ]
 }

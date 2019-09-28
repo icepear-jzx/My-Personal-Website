@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container d-flex justify-content-center">
+  <div class="card border-secondary">
+    <form class="card-body" method="post">
+      <div class="form-row">
+        <div class="form-group col-12">
+          <label>Skill</label>
+          <input type="text" name="name" class="form-control" value="{{ project['name'] }}">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col">
+          <label>Describe</label>
+          <textarea name="describe" class="form-control" rows="5">{{ project['describe'] }}</textarea>
+        </div>
+      </div>
+      <div class="form-row mt-1">
+        <div class="form-group col mb-0 d-flex justify-content-between">
+          <a class="btn btn-outline-danger col-5" href="{{ url_for('projects.delete', id=id) }}">Delete</a>
+          <button type="submit" class="btn btn-outline-primary col-5">Submit</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

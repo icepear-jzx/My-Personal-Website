@@ -1,4 +1,22 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div class="container">
+  <h1>Projects</h1>
+  {% for project in projects %}
+  <a class="my-a-unset" href="{{ url_for('projects.update', id=projects.index(project)) }}">
+    <div class="card my-card mt-4 animated bounceInRight" style="animation-delay: 0.{{ projects.index(project) }}s">
+      <div class="card-header">
+        <div class="row">
+          <div class="col">{{ project['name'] }}</div>
+        </div>
+      </div>
+      <div class="card-body">{{ project['describe'] | safe }}</div>
+    </div>
+  </a>
+  {% endfor %}
+  <a class="btn btn-primary my-btn-circle" href="{{ url_for('projects.create') }}">
+    <i class="fa fa-plus align-middle" aria-hidden="true"></i>
+  </a>
+</div>
 {% endblock %}
