@@ -39,6 +39,14 @@
         },
         {
             "name": "Othello AI"
+        },
+        {
+            "name": "Cellular Automata Evacuation Model",
+            "describe": ""
+        },
+        {
+            "name": "Reinforcement Learning Course",
+            "describe": ""
         }
     ]
 }
