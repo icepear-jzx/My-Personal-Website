@@ -38,3 +38,16 @@
     text-decoration: unset;
     color: unset;
 }
+.my-photo {
+    zoom: 40%;
+    border-radius: 50%;
+}
+.my-triangle-left {
+    position: relative;
+    top: 40px;
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-right: 40px solid #f8f9fa;
+    border-bottom: 20px solid transparent;
+}
