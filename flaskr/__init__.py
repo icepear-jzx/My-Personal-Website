@@ -1,11 +1,12 @@
 import os
-
+from flask_sslify import SSLify
 from flask import Flask, redirect, url_for
 
 
 def create_app():
 
     app = Flask(__name__, instance_relative_config=True)
+    sslify = SSLify(app)
     app.config.from_mapping(
         SECRET_KEY='dev'
     )
