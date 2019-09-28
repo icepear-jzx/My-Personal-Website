@@ -12,5 +12,6 @@ bp = Blueprint('home', __name__, url_prefix='/home')
 def index():
     db = get_db()
     skills = db["skills"]
-    return render_template('home/index.html', skills=skills)
+    projects = db["projects"]
+    return render_template('home/index.html', skills=skills, projects=projects)
 
