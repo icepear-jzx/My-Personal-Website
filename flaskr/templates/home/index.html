@@ -3,12 +3,29 @@
 {% block content %}
 <div class="my-size-full bg-dark"></div>
 <div class="container text-light d-flex justify-content-center">
-  <div class="row" style="width: 50rem">
-    <div class="col-6">
-      <img class="my-photo rounded" src="{{ url_for('static', filename='image/photo.jpg') }}">
+  <div class="row d-flex justify-content-center" style="width: 50rem; margin-top: 10%">
+    <div class="col-3 animated bounceIn">
+      <img class="my-photo" src="{{ url_for('static', filename='image/photo.jpeg') }}" style="border-radius: 50%">
     </div>
-    <div class="col-6">
-      <h1>Name: Zhexin Jin</h1>
+    <div class="col-9 row animated zoomIn delay-1s faster">
+    <div class="col-1 pr-0">
+      <div class="my-triangle-left float-right"></div>
+    </div>
+    <div class="col-11 pl-0">
+      <div class="card bg-light text-dark" style="border-radius: 20px; border: none">
+        <div class="card-body">
+          <p style="font-size: 24px">
+            Hi, I'm Zhexin Jin. 
+          </p>
+          <p class="mb-0" style="font-size: 20px">
+            My undergraduate major is Computer Science, 
+            and I'm a member of Hua Xia Talent Program in Computer Science and Technology 
+            at School of Computer Science and Technology, 
+            University of Science and Technology of China. 
+          </p>
+        </div>
+      </div>
+      </div>
     </div>
   </div>
   <!-- <h1 class="display-1 text-light text-center my-center-screen animated infinite bounce delay-2s">Hello, world!</h1> -->
