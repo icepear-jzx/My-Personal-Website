@@ -12,14 +12,19 @@
             "describe": ""
         },
         {
-            "name": "HTML/CSS",
+            "name": "HTML",
             "stars": 4,
-            "describe": "None"
+            "describe": ""
         },
         {
-            "name": "C/C++",
-            "stars": 2,
-            "describe": "<a href=\"https://baidu.com\">baidu</a>"
+            "name": "CSS",
+            "stars": 3,
+            "describe": ""
+        },
+        {
+            "name": "Verilog",
+            "stars": 3,
+            "describe": ""
         },
         {
             "name": "MATLAB",
@@ -27,7 +32,42 @@
             "describe": "None"
         },
         {
-            "name": "Verilog",
+            "name": "C",
+            "stars": 2,
+            "describe": ""
+        },
+        {
+            "name": "Git",
+            "stars": 2,
+            "describe": ""
+        },
+        {
+            "name": "Docker",
+            "stars": 2,
+            "describe": ""
+        },
+        {
+            "name": "Shell",
+            "stars": 2,
+            "describe": ""
+        },
+        {
+            "name": "C++",
+            "stars": 1,
+            "describe": ""
+        },
+        {
+            "name": "JavaScript",
+            "stars": 1,
+            "describe": ""
+        },
+        {
+            "name": "SQL",
+            "stars": 1,
+            "describe": ""
+        },
+        {
+            "name": "Java",
             "stars": 0,
             "describe": ""
         }
@@ -38,14 +78,27 @@
             "describe": ""
         },
         {
-            "name": "Othello AI"
+            "name": "Othello AI",
+            "describe": "An implementation of the game Othello(Reversi) using pygame including AI with Min-Max Algorithm and Alpha-Beta Pruning."
         },
         {
             "name": "Cellular Automata Evacuation Model",
             "describe": ""
         },
         {
-            "name": "Reinforcement Learning Course",
+            "name": "Reinforcement Learning",
+            "describe": ""
+        },
+        {
+            "name": "CCF BDCI Car Sales Forecasting",
+            "describe": ""
+        },
+        {
+            "name": "Pipeline CPU",
+            "describe": ""
+        },
+        {
+            "name": "IGEM 2019",
             "describe": ""
         }
     ]
