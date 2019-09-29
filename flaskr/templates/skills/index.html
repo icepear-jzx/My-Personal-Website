@@ -3,10 +3,32 @@
 {% block content %}
 <div class="container">
   <h1>Skills</h1>
-  <div class="card-change">
+  <div class="card-lines">
     {% for skill in skills %}
     <a class="my-a-unset" href="{{ url_for('skills.update', id=skills.index(skill)) }}">
       <div class="card my-card mt-4 animated bounceInRight" style="animation-delay: {{ 0.2 * skills.index(skill) }}s">
+        <div class="card-header">
+          <div class="row">
+            <div class="col">{{ skill['name'] }}</div>
+            <div class="col text-right text-dark">
+              {% for _ in range(skill['stars']) %}
+              <i class="fa fa-star"></i>
+              {% endfor %}
+              {% for _ in range(5 - skill['stars']) %}
+              <i class="far fa-star"></i>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+        <div class="card-body">{{ skill['describe'] | safe }}</div>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+  <div class="card-columns" style="display: none">
+    {% for skill in skills_disorder %}
+    <a class="my-a-unset" href="{{ url_for('skills.update', id=skills.index(skill)) }}">
+      <div id="{{ skills.index(skill) }}" class="card my-card mt-4 animated zoomIn">
         <div class="card-header">
           <div class="row">
             <div class="col">{{ skill['name'] }}</div>

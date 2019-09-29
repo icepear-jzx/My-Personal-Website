@@ -4,6 +4,8 @@ from flask import (
 
 from flaskr.db import get_db, update_db
 
+import random, copy
+
 bp = Blueprint('skills', __name__, url_prefix='/skills')
 
 
@@ -11,7 +13,9 @@ bp = Blueprint('skills', __name__, url_prefix='/skills')
 def index():
     db = get_db()
     skills = db["skills"]
-    return render_template('skills/index.html', skills=skills)
+    skills_disorder = copy.deepcopy(skills)
+    random.shuffle(skills_disorder)
+    return render_template('skills/index.html', skills=skills, skills_disorder=skills_disorder)
 
 
 @bp.route('/create', methods=('GET', 'POST'))
