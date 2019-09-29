@@ -3,20 +3,45 @@
 {% block content %}
 <div class="container">
   <h1>Projects</h1>
-  {% for project in projects %}
-  <a class="my-a-unset" href="{{ url_for('projects.update', id=projects.index(project)) }}">
-    <div class="card my-card mt-4 animated bounceInRight" style="animation-delay: {{ 0.2 * projects.index(project) }}s">
-      <div class="card-header">
-        <div class="row">
-          <div class="col">{{ project['name'] }}</div>
+  <div class="card-lines">
+    {% for project in projects %}
+    <a class="my-a-unset" href="{{ url_for('projects.update', id=projects.index(project)) }}">
+      <div class="card my-card mt-4 animated bounceInRight" style="animation-delay: {{ 0.2 * projects.index(project) }}s">
+        <div class="card-header">
+          <div class="row">
+            <div class="col">{{ project['name'] }}</div>
+          </div>
         </div>
+        <div class="card-body">{{ project['describe'] | safe }}</div>
       </div>
-      <div class="card-body">{{ project['describe'] | safe }}</div>
+    </a>
+    {% endfor %}
+  </div>
+  <div class="card-columns" style="display: none">
+    {% for project in projects %}
+    <a class="my-a-unset" href="{{ url_for('projects.update', id=projects.index(project)) }}">
+      <div id="{{ projects.index(project) }}" class="card my-card mt-4 animated zoomIn">
+        <div class="card-header">
+          <div class="row">
+            <div class="col">{{ project['name'] }}</div>
+          </div>
+        </div>
+        <div class="card-body">{{ project['describe'] | safe }}</div>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+  <div class="my-btn-group">
+    <div class="row">
+      <button class="btn btn-primary my-btn-circle change">
+        <i class="fa fa-th" style="font-size: 14px"></i>
+      </button>
     </div>
-  </a>
-  {% endfor %}
-  <a class="btn btn-primary my-btn-circle" href="{{ url_for('projects.create') }}">
-    <i class="fa fa-plus align-middle" aria-hidden="true"></i>
-  </a>
+    <div class="row mt-3">
+      <a class="btn btn-primary my-btn-circle" href="{{ url_for('skills.create') }}" role="button">
+        <i class="fa fa-plus align-middle"></i>
+      </a>
+    </div>
+  </div>
 </div>
 {% endblock %}
