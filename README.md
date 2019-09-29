@@ -7,6 +7,6 @@
 ```shell
 $ pip3 install flask
 $ pip3 install waitress
-$ ./initdb.sh
+$ ./runtest.sh
 $ ./runserver.sh
 ```

@@ -13,6 +13,7 @@
   <script src="{{ url_for('static', filename='javascript/popper.min.js') }}"></script>
   <script src="{{ url_for('static', filename='javascript/bootstrap.min.js') }}"></script>
   <script src="{{ url_for('static', filename='javascript/chart.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='javascript/my.js') }}"></script>
 
   <title>IcePear-Jzx</title>
 </head>
@@ -82,3 +83,16 @@
     <br><br><br>
   </footer>
 </body>
+<script>
+$('button.change').click(function () {
+  if ($(this).children('i.fa-th').length) {
+    $(this).children('i.fa-th').addClass('fa-th-list').removeClass('fa-th');
+    $('div.card').addClass('zoomIn').removeClass('bounceInRight');
+    $('div.card-change').addClass('card-columns');
+  } else {
+    $(this).children('i.fa-th-list').addClass('fa-th').removeClass('fa-th-list');
+    $('div.card').addClass('bounceInRight').removeClass('zoomIn');
+    $('div.card-change').removeClass('card-columns');
+  }
+});
+</script>

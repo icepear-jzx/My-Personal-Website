@@ -8,14 +8,15 @@
 .my-icon-nav:hover {
     color: rgba(255, 255, 255, 0.75);
 }
-.my-btn-circle {
+.my-btn-group {
     position: fixed;
     bottom: 30px;
-    right: 30px;
+    right: 50px;
+}
+.my-btn-circle {
     width: 40px;
     height: 40px;
     border-radius: 50% !important;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
 }
 .my-card:hover {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
