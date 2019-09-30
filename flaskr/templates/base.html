@@ -100,4 +100,10 @@ $('button.change').click(function () {
     $('div.card-columns').css('display', 'none');
   }
 });
+$(document).ready(function(){  
+  var cards = $('div.card')
+    for (let i = 0; i < cards.length; i++) {
+      $('div.card#' + i).css('animation-delay', Math.random() + 's')
+    }
+});
 </script>
