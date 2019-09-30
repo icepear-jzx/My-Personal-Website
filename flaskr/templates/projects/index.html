@@ -20,7 +20,7 @@
   <div class="card-columns">
     {% for project in projects %}
     <a class="my-a-unset" href="{{ url_for('projects.update', id=projects.index(project)) }}">
-      <div id="{{ projects.index(project) }}" class="card my-card mt-4 animated zoomIn">
+      <div class="card my-card mt-4 animated zoomIn" style="animation-delay: {{ random_num[projects.index(project)] }}s">
         <div class="card-header">
           <div class="row">
             <div class="col">{{ project['name'] }}</div>

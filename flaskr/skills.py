@@ -15,7 +15,9 @@ def index():
     skills = db["skills"]
     skills_disorder = copy.deepcopy(skills)
     random.shuffle(skills_disorder)
-    return render_template('skills/index.html', skills=skills, skills_disorder=skills_disorder)
+    random_num = [random.random() for _ in range(len(skills))]
+    return render_template('skills/index.html', skills=skills, 
+        skills_disorder=skills_disorder, random_num=random_num)
 
 
 @bp.route('/create', methods=('GET', 'POST'))

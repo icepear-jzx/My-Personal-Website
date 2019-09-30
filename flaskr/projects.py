@@ -4,6 +4,8 @@ from flask import (
 
 from flaskr.db import get_db, update_db
 
+import random
+
 
 bp = Blueprint('projects', __name__, url_prefix='/projects')
 
@@ -12,7 +14,8 @@ bp = Blueprint('projects', __name__, url_prefix='/projects')
 def index():
     db = get_db()
     projects = db["projects"]
-    return render_template('projects/index.html', projects=projects)
+    random_num = [random.random() for _ in range(len(projects))]
+    return render_template('projects/index.html', projects=projects, random_num=random_num)
 
 
 @bp.route('/create', methods=('GET', 'POST'))

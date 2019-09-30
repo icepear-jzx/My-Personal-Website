@@ -28,7 +28,7 @@
   <div class="card-columns" style="display: none">
     {% for skill in skills_disorder %}
     <a class="my-a-unset" href="{{ url_for('skills.update', id=skills.index(skill)) }}">
-      <div id="{{ skills.index(skill) }}" class="card my-card mt-4 animated zoomIn">
+      <div class="card my-card mt-4 animated zoomIn" style="animation-delay: {{ random_num[skills.index(skill)] }}s">
         <div class="card-header">
           <div class="row">
             <div class="col">{{ skill['name'] }}</div>
