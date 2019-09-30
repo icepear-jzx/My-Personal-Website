@@ -90,7 +90,7 @@ $('button.change').click(function () {
     $(this).children('i.fa-th').addClass('fa-th-list').removeClass('fa-th');
     $('div.card-lines').css('display', 'none');
     $('div.card-columns').css('display', 'block');
-    var cards = $('div.card')
+    var cards = $('div.card');
     for (let i = 0; i < cards.length; i++) {
       $('div.card#' + i).css('animation-delay', Math.random() + 's')
     }
@@ -100,10 +100,10 @@ $('button.change').click(function () {
     $('div.card-columns').css('display', 'none');
   }
 });
-$(document).ready(function(){  
+$('div.card').ready(function(){  
   var cards = $('div.card')
-    for (let i = 0; i < cards.length; i++) {
-      $('div.card#' + i).css('animation-delay', Math.random() + 's')
-    }
+  for (let i = 0; i < cards.length; i++) {
+    $('div.card#' + i).css('animation-delay', Math.random() + 's')
+  }
 });
 </script>
