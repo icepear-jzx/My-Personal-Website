@@ -14,7 +14,7 @@
         {
             "name": "HTML",
             "stars": 4,
-            "describe": "I can fluently use HTML to finish front-end design. Sometimes I need to check the manual. <br>\r\nI design and implement my personal website on my own. See <a href=\"http://jinzhe.xin/\">http://jinzhe.xin/</a>. "
+            "describe": "I can fluently use HTML to finish front-end design. Sometimes I need to check the manual. <br>\r\nI designed and implemented my personal website on my own. See <a href=\"http://jinzhe.xin/\">http://jinzhe.xin/</a>. "
         },
         {
             "name": "CSS",
@@ -24,42 +24,37 @@
         {
             "name": "Verilog",
             "stars": 3,
-            "describe": ""
+            "describe": "Learned from school courses Digital Circuit labs and Computer Organization and Design labs. <br>\r\nI implemented a pipeline CPU by myself."
         },
         {
             "name": "C",
             "stars": 2,
-            "describe": ""
+            "describe": "Learned it in the first year of university. I'm familiar with it's basic syntax and wrote some codes in the course Programming."
         },
         {
             "name": "Git",
             "stars": 2,
-            "describe": ""
-        },
-        {
-            "name": "Docker",
-            "stars": 2,
-            "describe": ""
-        },
-        {
-            "name": "Shell",
-            "stars": 2,
-            "describe": ""
+            "describe": "Simple use."
         },
         {
             "name": "JavaScript",
             "stars": 2,
-            "describe": ""
+            "describe": "Haven't studied systematically, but I can meet simple design requirements with jQuery. Manual or Google needed. <br>\r\nJavaScript file written by myself: <a href=\"https://github.com/IcePear-Jzx/My-Personal-Website/blob/master/flaskr/static/javascript/my.js\">https://github.com/IcePear-Jzx/My-Personal-Website/blob/master/flaskr/static/javascript/my.js</a>"
+        },
+        {
+            "name": "Docker",
+            "stars": 1,
+            "describe": "I haven\u2019t got much experience with it, but I really like this application deployment solution."
         },
         {
             "name": "SQL",
             "stars": 1,
-            "describe": ""
+            "describe": "Simple use. I haven\u2019t got much experience with it."
         },
         {
             "name": "C++",
-            "stars": 1,
-            "describe": "Only read half of the book C++ Primer Plus. Read-only."
+            "stars": 0,
+            "describe": "Only read half of the book C++ Primer Plus. "
         }
     ],
     "projects": [
