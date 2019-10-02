@@ -27,11 +27,6 @@
             "describe": ""
         },
         {
-            "name": "MATLAB",
-            "stars": 2,
-            "describe": "None"
-        },
-        {
             "name": "C",
             "stars": 2,
             "describe": ""
@@ -52,11 +47,6 @@
             "describe": ""
         },
         {
-            "name": "C++",
-            "stars": 1,
-            "describe": ""
-        },
-        {
             "name": "JavaScript",
             "stars": 1,
             "describe": ""
@@ -64,11 +54,6 @@
         {
             "name": "SQL",
             "stars": 1,
-            "describe": ""
-        },
-        {
-            "name": "Java",
-            "stars": 0,
             "describe": ""
         }
     ],
