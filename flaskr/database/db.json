@@ -9,17 +9,17 @@
         {
             "name": "Python",
             "stars": 4,
-            "describe": ""
+            "describe": "I have been using Python for two years. I can fluently use Python for daily programming, but I have to check the manual on some things and I'm not familiar with it's advanced usage. <br>\r\nI implement a game called Othello which is also named Reversi using pygame. It has a foolish AI with Min-Max Algorithm and Alpha-Beta Pruning. You can see the source code on <a href=\"https://github.com/IcePear-Jzx/Othello-AI\">https://github.com/IcePear-Jzx/Othello-AI</a>. <br>\r\nI use Flask as the back-end framework of my personal website which you're visiting now. Source code is on <a href=\"https://github.com/IcePear-Jzx/My-Personal-Website\">https://github.com/IcePear-Jzx/My-Personal-Website</a>. <br>\r\nImplementations of DP(Dynamic Programming), MC(Monte-Caro Learning), TD(Temporal-Difference), Sarsa, Q-learning, DQN, A3C and DDPG based on PyTorch and OpenAI Gym. Source code: <a href=\"https://github.com/IcePear-Jzx/SJTU-Reinforcement-Learning\">https://github.com/IcePear-Jzx/SJTU-Reinforcement-Learning</a>. <br> "
         },
         {
             "name": "HTML",
             "stars": 4,
-            "describe": ""
+            "describe": "I can fluently use HTML to finish front-end design. Sometimes I need to check the manual. <br>\r\nI design and implement my personal website on my own. See <a href=\"http://jinzhe.xin/\">http://jinzhe.xin/</a>. "
         },
         {
             "name": "CSS",
             "stars": 3,
-            "describe": ""
+            "describe": "Haven't studied systematically, but it's enough to meet conventional design requirements with Google's help. <br>\r\nMost of the time, I use Bootstrap for convenience. <br>\r\nCSS file of my website written by myself: <a href=\"https://github.com/IcePear-Jzx/My-Personal-Website/blob/master/flaskr/static/css/my.css\">https://github.com/IcePear-Jzx/My-Personal-Website/blob/master/flaskr/static/css/my.css</a>"
         },
         {
             "name": "Verilog",
@@ -48,13 +48,18 @@
         },
         {
             "name": "JavaScript",
-            "stars": 1,
+            "stars": 2,
             "describe": ""
         },
         {
             "name": "SQL",
             "stars": 1,
             "describe": ""
+        },
+        {
+            "name": "C++",
+            "stars": 1,
+            "describe": "Only read half of the book C++ Primer Plus. Read-only."
         }
     ],
     "projects": [
