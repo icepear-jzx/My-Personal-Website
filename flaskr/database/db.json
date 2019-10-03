@@ -9,7 +9,7 @@
         {
             "name": "Python",
             "stars": 4,
-            "describe": "I have been using Python for two years. I can fluently use Python for daily programming, but I have to check the manual on some things and I'm not familiar with it's advanced usage. <br>\r\nI implement a game called Othello which is also named Reversi using pygame. It has a foolish AI with Min-Max Algorithm and Alpha-Beta Pruning. You can see the source code on <a href=\"https://github.com/IcePear-Jzx/Othello-AI\">https://github.com/IcePear-Jzx/Othello-AI</a>. <br>\r\nI use Flask as the back-end framework of my personal website which you're visiting now. Source code is on <a href=\"https://github.com/IcePear-Jzx/My-Personal-Website\">https://github.com/IcePear-Jzx/My-Personal-Website</a>. <br>\r\nImplementations of DP(Dynamic Programming), MC(Monte-Caro Learning), TD(Temporal-Difference), Sarsa, Q-learning, DQN, A3C and DDPG based on PyTorch and OpenAI Gym. Source code: <a href=\"https://github.com/IcePear-Jzx/SJTU-Reinforcement-Learning\">https://github.com/IcePear-Jzx/SJTU-Reinforcement-Learning</a>. <br> "
+            "describe": "I have been using Python for two years. I can fluently use Python for daily programming, but I have to check the manual on some things and I'm not familiar with it's advanced usage. <br>\r\nI implement a game called Othello which is also named Reversi using pygame. It has a foolish AI with Min-Max Algorithm and Alpha-Beta Pruning. You can see the source code on <a href=\"https://github.com/IcePear-Jzx/Othello-AI\">https://github.com/IcePear-Jzx/Othello-AI</a>. <br>\r\nI use Flask as the back-end framework of my personal website which you're visiting now. Source code is on <a href=\"https://github.com/IcePear-Jzx/My-Personal-Website\">https://github.com/IcePear-Jzx/My-Personal-Website</a>. <br>\r\nImplementations of DP(Dynamic Programming), MC(Monte-Caro Learning), TD(Temporal-Difference), Sarsa, Q-learning, DQN, A3C and DDPG based on PyTorch and OpenAI Gym. Source code: <a href=\"https://github.com/IcePear-Jzx/SJTU-Reinforcement-Learning\">https://github.com/IcePear-Jzx/SJTU-Reinforcement-Learning</a>. "
         },
         {
             "name": "HTML",
@@ -25,6 +25,11 @@
             "name": "Verilog",
             "stars": 3,
             "describe": "Learned from school courses Digital Circuit labs and Computer Organization and Design labs. <br>\r\nI implemented a pipeline CPU by myself."
+        },
+        {
+            "name": "MATLAB",
+            "stars": 3,
+            "describe": "Simple use. Enough for conventional requirements. Sometimes need the manual or Google."
         },
         {
             "name": "C",
@@ -60,7 +65,7 @@
     "projects": [
         {
             "name": "My Personal Website",
-            "describe": ""
+            "describe": "I designed and implemented my personal website using Flask as back-end framework and Bootstrap 4 as front-end framework. <br>\r\nYou can visit my website <a href=\"http://jinzhe.xin/\">http://jinzhe.xin/</a>. <br>\r\nSource code: <a href=\"https://github.com/IcePear-Jzx/My-Personal-Website\">https://github.com/IcePear-Jzx/My-Personal-Website</a>."
         },
         {
             "name": "Othello AI",
@@ -68,23 +73,23 @@
         },
         {
             "name": "Cellular Automata Evacuation Model",
-            "describe": ""
+            "describe": "A modified cellular automata model for 2019 Mathematical Contest in Modeling Problem D. <br>\r\nOur team was designated as Meritorious Winner! <br>\r\nSource code: <a href=\"https://github.com/IcePear-Jzx/Cellular-Automata-Evacuation-Model\">https://github.com/IcePear-Jzx/Cellular-Automata-Evacuation-Model</a>"
         },
         {
             "name": "Reinforcement Learning",
-            "describe": ""
+            "describe": "Implementations of DP(Dynamic Programming), MC(Monte-Caro Learning), TD(Temporal-Difference), Sarsa, Q-learning, DQN, A3C and DDPG based on PyTorch and OpenAI Gym. <br>\r\nSource code: <a href=\"https://github.com/IcePear-Jzx/SJTU-Reinforcement-Learning\">https://github.com/IcePear-Jzx/SJTU-Reinforcement-Learning</a>. "
         },
         {
             "name": "CCF BDCI Car Sales Forecasting",
-            "describe": ""
+            "describe": "I'm participating in CCF Big Data & Computing Intelligence Contest.  The title of the question is Sales Forecast of Passenger Vehicle Segment Market. <br>\r\nStill working on it."
         },
         {
             "name": "Pipeline CPU",
-            "describe": ""
+            "describe": "A pipeline CPU implemented by myself using Verilog."
         },
         {
             "name": "IGEM 2019",
-            "describe": ""
+            "describe": "Still working on it."
         }
     ]
 }
