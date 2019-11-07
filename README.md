@@ -1,6 +1,6 @@
 # My-Personal-Website
 
-> My personal website based on Flask, Waitress and Bootstrap.
+> My personal website based on Bootstrap(frontend), Flask(backend) and Waitress(server).
 >
 > See [http://jinzhe.xin/](http://jinzhe.xin/).
 
