@@ -1,6 +1,6 @@
 # My-Personal-Website
 
-> My personal website using Python(Flask), JSON, Waitress and HTML/CSS/JavaScript (Bootstrap 4).
+> My personal website based on Flask, Waitress and Bootstrap.
 >
 > See [http://jinzhe.xin/](http://jinzhe.xin/).
 
