@@ -4,9 +4,21 @@
 >
 > See [http://jinzhe.xin/](http://jinzhe.xin/).
 
+## Download
+
 ```shell
-$ pip3 install flask
-$ pip3 install waitress
+git clone https://github.com/IcePear-Jzx/My-Personal-Website.git
+```
+
+## Installation
+
+```shell
+$ pip3 install flask waitress --user
+```
+
+## Usage
+
+```shell
 $ ./runtest.sh
 $ ./runserver.sh
 ```
